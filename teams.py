@@ -1,3 +1,3 @@
-def contract():
-    names = input("Enter a name: ")
-    list = []
+def contract(names):
+    for name in names:
+        print(name.strip())
