@@ -1,3 +1,6 @@
-def contract(names):
+def validate_team_names(names):
     for name in names:
-        print(name.strip())
+        cleaned = name.strip()
+        print(cleaned)
+
+print(validate_team_names(["  Red Lions  ", "Hawks"]))
