@@ -8,8 +8,9 @@ def validate_team_names(names):
         print(cleaned)
 
         lowered = cleaned.lower() 
+        
         if lowered in seen:
-            raise ValueError(f"{cleaned}. You know the problem, but not which name.")
-        seen.add("lowered")
+            raise ValueError(f"A duplicate team name, you already have {cleaned} working.")
+        seen.add(lowered)
 
-print(validate_team_names(["LIONS", "lions"]))
+print(validate_team_names(["Hawks", "Lions", "lions"]))
