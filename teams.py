@@ -1,4 +1,5 @@
 def validate_team_names(names):
+    seen = set()
     for name in names:
         cleaned = name.strip()
 
@@ -6,4 +7,9 @@ def validate_team_names(names):
             raise ValueError("Team name cannot be empty.")
         print(cleaned)
 
-print(validate_team_names(["Lions", " ", "Hawks"]))
+        lowered = cleaned.lower() 
+        if lowered in seen:
+            raise ValueError(f"{cleaned}. You know the problem, but not which name.")
+        seen.add("lowered")
+
+print(validate_team_names(["LIONS", "lions"]))
