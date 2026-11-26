@@ -1,5 +1,6 @@
 def validate_team_names(names):
     seen = set()
+    
     for name in names:
         cleaned = name.strip()
 
